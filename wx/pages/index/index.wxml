@@ -1,0 +1,54 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="btn-area">
+    <button bindtap='gourl'>转跳</button>
+  </view>
+  <view>
+    <button bindtap="sis">扫一扫</button>
+  </view>
+  <view>
+    <button bindtap="phone">拨号</button>
+  </view>
+  <view>
+    <button bindtap='img' type="''">图片</button>
+    <image src='{{images}}' mode="scaleToFill"></image>
+  </view>
+  <button bindtap="changeText">{{mottos}}</button>
+  <navigator url="/pages/map/map?title=123" hover-class="navigator-hover">跳转到新页面</navigator>
+  <view class="usermotto">
+    <text class="user-motto">{{mottos}}</text>
+  </view>
+  <view style='text-align:center;'>
+    <view>{{year}}年{{month}}月{{day}}日</view>
+    <picker-view indicator-style="height: 50px;" style="width: 300px; height: 300px;" value="{{value}}" bindchange="bindChange">
+      <picker-view-column>
+        <view wx:for="{{years}}" style="line-height: 50px;">{{item}}年</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{months}}" style="line-height: 50px">{{item}}月</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{days}}" style="line-height: 50px">{{item}}日</view>
+      </picker-view-column>
+    </picker-view>
+  </view> -->
+  <view class="swiper">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="355" height="150" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view wx:for="{{list}}">
+  <text>{{item}}</text>
+  </view>
+</view>
